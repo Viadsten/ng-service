@@ -1,0 +1,6 @@
+<div class="pt-4">
+  <form method="post" (submit)="onSubmit($event, filter.value)">
+    <input type="text" placeholder="search" class="border px-3 py-1 rounded-md mr-4" #filter/>
+    <button type="submit" (click)="onSubmit($event, filter.value)">search</button>
+  </form>
+</div>

@@ -1,0 +1,10 @@
+<h2 class="text-xl font-bold mb-4">Comments:</h2>
+<div *ngIf="isLoading">
+  <h2>loading...</h2>
+</div>
+<ol *ngIf="comments" class="list-inside list-decimal" style="display:flex; flex-direction: column;">
+  <li *ngFor="let comment of comments" class="mb-2">
+    <a [routerLink]="['/users', comment.id % 10 + 1]" class="text-sm font-semibold mb-1">{{ comment.email }}</a>
+    <p class="block">{{ comment.name }} - {{ comment.body }}</p>
+  </li>
+</ol>

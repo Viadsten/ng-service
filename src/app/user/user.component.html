@@ -1,0 +1,18 @@
+<div class="w-3/6 m-auto pt-6">
+  <a [routerLink]="['/users']" class="hover:underline text-base font-semibold mb-5 block">< users</a>
+  <div *ngIf="isLoading">
+    <h2>loading...</h2>
+  </div>
+  <div *ngIf="user" style="display:flex; flex-direction: column;" class="mb-6">
+    <h1 class="mb-4 text-3xl font-bold">{{ user.name }}</h1>
+    <div class="grid" style="grid-template-columns: 25% 75%; row-gap: 10px;">
+      <span class="font-semibold border-b-2">Name</span><p class="text-lg border-b-2 ">{{ user.name }}</p>
+      <span class="font-semibold border-b-2">Username</span><p class="text-lg border-b-2 ">{{ user.username }}</p>
+      <span class="font-semibold border-b-2">Email</span><p class="text-lg border-b-2 ">{{ user.email }}</p>
+      <span class="font-semibold border-b-2">Address</span><p class="text-lg border-b-2 ">{{ user.address.city}}, {{ user.address.street}}, {{ user.address.suite }}</p>
+      <span class="font-semibold border-b-2">Phone</span><p class="text-lg border-b-2 ">{{ user.phone }}</p>
+      <span class="font-semibold border-b-2">Website</span><p class="text-lg border-b-2 ">{{ user.website }}</p>
+      <span class="font-semibold border-b-2">Company</span><p class="text-lg border-b-2 ">{{ user.company.name }}</p>
+    </div>
+  </div>
+</div>

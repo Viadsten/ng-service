@@ -1,0 +1,7 @@
+<div *ngIf="post">
+  <a [routerLink]="['/posts', post.id]" class="hover:underline">
+    <span class="title">{{ post.id }}. </span>
+    <span class="text-base underline">{{ post.title }}</span>
+    <span class="text-sm block">{{ post.body }}</span>
+  </a>
+</div>

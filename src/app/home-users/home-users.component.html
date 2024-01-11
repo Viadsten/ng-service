@@ -1,0 +1,12 @@
+<div class="w-3/6 m-auto gap-4 flex flex-col">
+  <app-filter (clicked)="setFilteredUsers($event)" />
+  <ol class="li" style="list-style: decimal;">
+    <li *ngFor="let user of filteredUsers" class="mb-3 underline">
+      <a [routerLink]="['/users', user.id]" class="flex gap-4">
+        <p>{{ user.name }}</p>
+        <p>{{ user.username }}</p>
+        <p>{{ user.email }}</p>
+      </a>
+    </li>
+  </ol>
+</div>

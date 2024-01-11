@@ -1,0 +1,11 @@
+<div class="w-3/6 m-auto pt-6">
+  <a [routerLink]="['/posts']" class="hover:underline text-base font-semibold mb-5 block">< users</a>
+  <div *ngIf="isLoading">
+    <h2>loading...</h2>
+  </div>
+  <div *ngIf="post" style="display:flex; flex-direction: column;" class="mb-6">
+    <h1 class="mb-4 text-3xl font-bold">{{ post.title }}</h1>
+    <p class="text-lg">{{ post.body }}</p>
+  </div>
+  <comments />
+</div>

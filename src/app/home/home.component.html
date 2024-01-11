@@ -1,0 +1,7 @@
+<div class="w-3/6 m-auto gap-4 flex flex-col">
+  <app-filter (clicked)="setFilteredPosts($event)" />
+  <app-card
+    *ngFor="let post of filteredPosts"
+    [post]="post"
+  />
+</div>
